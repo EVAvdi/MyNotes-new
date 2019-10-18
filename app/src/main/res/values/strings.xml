@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Notes</string>
+    <string name="myPass">Введите пароль</string>
+    <string name="saveNote">Заметка сохранена</string>
+</resources>
