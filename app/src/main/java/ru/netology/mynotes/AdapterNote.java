@@ -78,12 +78,12 @@ public class AdapterNote extends BaseAdapter {
         TextView dateDeadline = view.findViewById(R.id.dateDeadline);
         TextView dateUpdateNote = view.findViewById(R.id.dateUpdateNote);
 
-        if (Note.getHeadline().length() == 0) {
+        if (Note.getTitleNote().length() == 0) {
             titleNote.setVisibility(View.GONE);
         } else {
 
             titleNote.setVisibility(View.VISIBLE);
-            titleNote.setText(Note.getHeadline());
+            titleNote.setText(Note.getTitleNote());
         }
         if (Note.getTextNote().length() == 0) {
             textNote.setVisibility(View.GONE);

@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".AddNoteActivity"
-    tools:showIn="@layout/activity_add_note">
+    tools:showIn="@layout/activity_add_note"
+    tools:ignore="ScrollViewCount">
 
 
         <LinearLayout
@@ -15,16 +16,6 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             tools:context=".AddNoteActivity">
-
-            <LinearLayout
-                android:id="@+id/editTextParentLinearLayout"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="?attr/colorPrimary"
-                android:gravity="center"
-                android:orientation="vertical">
-
 
                <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/toDoTextInput"
@@ -45,12 +36,12 @@
                         android:lines="2"
                         android:maxLength="30"
                         android:maxLines="3"
-                        android:textColor="@android:color/white"
+                        android:textColor="@color/secondary_text"
                         tools:ignore="MissingConstraints" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </LinearLayout>
+
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -186,7 +177,6 @@
 
 
             </LinearLayout>
-
         </LinearLayout>
 
 </ScrollView>

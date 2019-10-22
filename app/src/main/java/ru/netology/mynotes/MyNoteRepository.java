@@ -106,7 +106,7 @@ public class MyNoteRepository implements NoteRepository {
             }
 
             // пишем данные
-            bw.write((note.getHeadline() == null ? "" : note.getHeadline()) + ";" +
+            bw.write((note.getTitleNote() == null ? "" : note.getTextNote()) + ";" +
                     (note.getTextNote() == null ? "" : note.getTextNote()) + ";" +
                     (note.getDateDeadline() == null ? "" : note.getDateDeadline()) + ";" +
                     note.getDateUpdateNote() + "\n");

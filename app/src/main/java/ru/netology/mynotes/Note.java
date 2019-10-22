@@ -4,24 +4,24 @@ import androidx.annotation.Nullable;
 
 public class Note {
 
-    private String headline;
+    private String titleNote;
     private String textNote;
     private String dateDeadline;
     private String dateUpdateNote;
 
-    Note(@Nullable String headline, String textNote, @Nullable String dateDeadline, @Nullable String dateUpdateNote) {
-        this.headline = headline;
+    Note(@Nullable String titleNote, String textNote, @Nullable String dateDeadline, @Nullable String dateUpdateNote) {
+        this.titleNote = titleNote;
         this.textNote = textNote;
         this.dateDeadline = dateDeadline;
         this.dateUpdateNote = dateUpdateNote;
     }
 
-    String getHeadline() {
-        return headline;
+    String getTitleNote() {
+        return titleNote;
     }
 
-    public void setHeadline(String headline) {
-        this.headline = headline;
+    public void setTitleNote(String titleNote) {
+        this.titleNote = titleNote;
     }
 
     String getTextNote() {

@@ -12,9 +12,11 @@
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
-        <include layout="@layout/toolbar_base"/>
+       <include layout="@layout/toolbar_base"/>
 
     </com.google.android.material.appbar.AppBarLayout>
+
+
     <include layout="@layout/fragment_add_note" />
 
 

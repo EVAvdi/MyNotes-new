@@ -23,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="20dp"
+        app:backgroundTint="@color/colorAccent"
         android:src="@drawable/plus" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

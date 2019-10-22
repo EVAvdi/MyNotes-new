@@ -69,8 +69,8 @@ public class AddNoteActivity extends AppCompatActivity implements DatePickerDial
 
                 Note note = myNoteRepository.getNoteById(Integer.toString(bundle.getInt(MainActivity.POSITION_LISTVIEW)));
 
-                if (note.getHeadline().length() != 0) {
-                    titleNote.setText(note.getHeadline());
+                if (note.getTitleNote().length() != 0) {
+                    titleNote.setText(note.getTitleNote());
                 }
                 if (note.getTextNote().length() != 0) {
                     textNote.setText(note.getTextNote());
@@ -87,7 +87,7 @@ public class AddNoteActivity extends AppCompatActivity implements DatePickerDial
         }
 
         Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+//        setSupportActionBar(toolbar);
 
         ActionBar actionBar = getSupportActionBar();
 
