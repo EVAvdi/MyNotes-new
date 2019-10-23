@@ -8,6 +8,6 @@
         android:id="@+id/action_save"
         android:orderInCategory="100"
         android:title="Сохранить заметку"
-        android:icon="@drawable/save"
+        android:icon="@drawable/ic_action_saving"
         app:showAsAction="always" />
 </menu>

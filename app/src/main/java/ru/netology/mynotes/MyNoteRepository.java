@@ -39,7 +39,7 @@ public class MyNoteRepository implements NoteRepository {
 
     @Override
     public void createDefaultNotes() {
-        String dateNow = new SimpleDateFormat("DD.MMM.YYYY", Locale.getDefault()).format(new Date());
+        String dateNow = new SimpleDateFormat("dd.mmm.yyyy", Locale.getDefault()).format(new Date());
 
         saveNote(new Note(context.getString(R.string.headline_1), context.getString(R.string.textNote_1), context.getString(R.string.dateDeadline_1), dateNow));
         saveNote(new Note(null, context.getString(R.string.textNote_2), null, context.getString(R.string.dateUpdate_2)));
