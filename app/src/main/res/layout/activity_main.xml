@@ -23,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="20dp"
+        style="@style/Widget.MaterialComponents.FloatingActionButton"
         app:backgroundTint="@color/colorAccent"
         android:src="@drawable/plus" />
 
