@@ -88,9 +88,9 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(final AdapterView<?> parent, final View view, final int position, final long id) {
-                new AlertDialog.Builder(MainActivity.this).setIcon(android.R.drawable.ic_dialog_alert).setTitle("Удаление заметки")
-                        .setMessage("Вы уверены, что хотите удалить заметку?")
-                        .setPositiveButton("Да, я уверен(а)", new DialogInterface.OnClickListener() {
+                new AlertDialog.Builder(MainActivity.this).setIcon(android.R.drawable.ic_dialog_alert).setTitle(getString(R.string.note_delete))
+                        .setMessage(getString(R.string.question_to_delete_note))
+                        .setPositiveButton(getString(R.string.yes_i_sure), new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 adapter.removeNote(position);
@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
 
                                 displayNotes();
                             }
-                        }).setNegativeButton("Нет, не удаляем", null).show();
+                        }).setNegativeButton(getString(R.string.no_i_not_sure), null).show();
                 return true;
             }
         });
@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
         if (back_pressed + 2000 > System.currentTimeMillis()) {
             finish();
         } else {
-            Toast.makeText(getBaseContext(), "Нажмите еще раз, чтобы выйти", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getBaseContext(), getString(R.string.click_again), Toast.LENGTH_SHORT).show();
         }
         back_pressed = System.currentTimeMillis();
     }

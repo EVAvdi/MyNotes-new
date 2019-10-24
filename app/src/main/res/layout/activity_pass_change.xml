@@ -20,14 +20,14 @@
         android:id="@+id/lock"
         android:layout_width="121dp"
         android:layout_height="116dp"
-        android:layout_marginStart="140dp"
+        android:layout_marginStart="120dp"
         android:layout_marginTop="164dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.035"
+        app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/password" />
+        android:src="@drawable/password" />
 
     <EditText
         android:id="@+id/doYouPass"

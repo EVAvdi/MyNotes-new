@@ -39,13 +39,12 @@ public class MyNoteRepository implements NoteRepository {
 
     @Override
     public void createDefaultNotes() {
-        String dateNow = new SimpleDateFormat("dd.mmm.yyyy", Locale.getDefault()).format(new Date());
+        String dateNow = new SimpleDateFormat(context.getString(R.string.data_format), Locale.getDefault()).format(new Date());
 
-        saveNote(new Note(context.getString(R.string.headline_1), context.getString(R.string.textNote_1), context.getString(R.string.dateDeadline_1), dateNow));
-        saveNote(new Note(null, context.getString(R.string.textNote_2), null, context.getString(R.string.dateUpdate_2)));
-        saveNote(new Note(null, context.getString(R.string.textNote_3), null, context.getString(R.string.dateUpdate_3)));
-        saveNote(new Note(context.getString(R.string.headline_4), context.getString(R.string.textNote_4), null, context.getString(R.string.dateUpdate_4)));
-        saveNote(new Note(null, context.getString(R.string.textNote_5), context.getString(R.string.dateDeadline_5), context.getString(R.string.dateUpdate_5)));
+        saveNote(new Note(context.getString(R.string.title1), context.getString(R.string.text1), context.getString(R.string.deadline), dateNow));
+        saveNote(new Note(null,context.getString(R.string.text2),null,context.getString(R.string.date_update)));
+        saveNote(new Note(null,context.getString(R.string.text3),context.getString(R.string.deadline2),dateNow));
+        saveNote(new Note(context.getString(R.string.title4), context.getString(R.string.text4), context.getString(R.string.deadline3), context.getString(R.string.data_update2)));
     }
 
     @Override

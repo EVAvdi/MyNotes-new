@@ -61,9 +61,6 @@ public class DateInput implements TextWatcher {
                 mon = mon < 1 ? 1 : mon > 12 ? 12 : mon;
             }
             cal.set(Calendar.MONTH, mon - 1);
-            // ^ first set year for the line below to work correctly
-            //with leap years - otherwise, date e.g. 29/02/2012
-            //would be automatically corrected to 28/02/2012
 
             if ((year == getYear) && (mon == getMon)) {
                 day = day < getDay ? getDay : (day > cal.getActualMaximum(Calendar.DATE)) ? cal.getActualMaximum(Calendar.DATE) : day;

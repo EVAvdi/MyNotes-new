@@ -3,9 +3,7 @@ package ru.netology.mynotes;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
@@ -42,11 +40,11 @@ public class PassChangeActivity extends AppCompatActivity {
                     App.getKeystore().saveNewPassword(editNewPassword.getText().toString());
 
                     editNewPassword.setText("");
-                    Toast.makeText(PassChangeActivity.this, "Пароль сохранен", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PassChangeActivity.this, getString(R.string.password_saved), Toast.LENGTH_SHORT).show();
 
                     finish();
                 } else {
-                    Toast.makeText(PassChangeActivity.this, "Пароль должен состоять из 4 цифр", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PassChangeActivity.this, getString(R.string.password_four_word), Toast.LENGTH_SHORT).show();
                 }
             }
         });

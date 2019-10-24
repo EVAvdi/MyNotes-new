@@ -1,13 +1,12 @@
 package ru.netology.mynotes;
 
 import android.content.Context;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Comparator;
 import java.util.Date;
 
-public class ComparatorNotes implements Comparator <Note> {
+class ComparatorNotes implements Comparator<Note> {
     private Context context;
 
     ComparatorNotes(Context context) {
@@ -21,21 +20,21 @@ public class ComparatorNotes implements Comparator <Note> {
         int result = 0;
 
         try {
-            datedeadline1 = new SimpleDateFormat("dd.mmm.yyyy").parse(o1.getDateDeadline());
+            datedeadline1 = new SimpleDateFormat(context.getString(R.string.data_format)).parse(o1.getDateDeadline());
 
         } catch (ParseException e) {
             e.printStackTrace();
         }
 
         try {
-            datedeadline2 = new SimpleDateFormat("dd.mmm.yyyy").parse(o2.getDateDeadline());
+            datedeadline2 = new SimpleDateFormat(context.getString(R.string.data_format)).parse(o2.getDateDeadline());
         } catch (ParseException e) {
             e.printStackTrace();
         }
 
         try {
-            dateUpdate1 = new SimpleDateFormat("dd.mmm.yyyy").parse(o1.getDateUpdateNote());
-            dateUpdate2 = new SimpleDateFormat("dd.mmm.yyyy").parse(o2.getDateUpdateNote());
+            dateUpdate1 = new SimpleDateFormat(context.getString(R.string.data_format)).parse(o1.getDateUpdateNote());
+            dateUpdate2 = new SimpleDateFormat(context.getString(R.string.data_format)).parse(o2.getDateUpdateNote());
         } catch (ParseException e) {
             e.printStackTrace();
         }

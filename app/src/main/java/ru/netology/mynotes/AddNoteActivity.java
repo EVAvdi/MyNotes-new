@@ -141,14 +141,14 @@ public class AddNoteActivity extends AppCompatActivity implements DatePickerDial
 
                 if (bundle.getInt(MainActivity.POSITION_LISTVIEW) == -1) {
                     if (textNote.getText().length() == 0) {
-                        Toast.makeText(this, "Для сохранения, заполните тело заметки", Toast.LENGTH_LONG).show();
+                        Toast.makeText(this, getString(R.string.body_make_text), Toast.LENGTH_LONG).show();
                     } else {
                         myNoteRepository.saveNote(new Note((titleNote.getText().length() == 0 ? null : titleNote.getText().toString())
                                 , textNote.getText().toString()
                                 , (dataDeadline.getText().length() == 0 ? null : dataDeadline.getText().toString())
-                                , new SimpleDateFormat("dd.mm.yyyy", Locale.getDefault()).format(new Date())));
+                                , new SimpleDateFormat(getString(R.string.data_format), Locale.getDefault()).format(new Date())));
 
-                        Toast.makeText(this, "Заметка сохранена", Toast.LENGTH_LONG).show();
+                        Toast.makeText(this, getString(R.string.note_saving), Toast.LENGTH_LONG).show();
 
                     }
                 } else {
@@ -156,9 +156,9 @@ public class AddNoteActivity extends AppCompatActivity implements DatePickerDial
                     myNoteRepository.saveNote(new Note((titleNote.getText().length() == 0 ? null : titleNote.getText().toString())
                             , textNote.getText().toString()
                             , (dataDeadline.getText().length() == 0 ? null : dataDeadline.getText().toString())
-                            , new SimpleDateFormat("dd.mm.yyyy", Locale.getDefault()).format(new Date())));
+                            , new SimpleDateFormat(getString(R.string.data_format), Locale.getDefault()).format(new Date())));
 
-                    Toast.makeText(this, "Изменения сохранены", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, getString(R.string.changes_save), Toast.LENGTH_LONG).show();
                 }
 
                 finish();

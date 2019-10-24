@@ -101,7 +101,7 @@ public class PasswordActivity extends AppCompatActivity {
                 if (App.getKeystore().checkPassword(enteredUserPassword)) {
                     finish();
                 } else {
-                    Toast.makeText(PasswordActivity.this, "Неправильно введен пароль", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PasswordActivity.this, getString(R.string.password_not_right), Toast.LENGTH_SHORT).show();
                 }
             }
         }

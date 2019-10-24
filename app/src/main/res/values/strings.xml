@@ -2,4 +2,17 @@
     <string name="app_name">My Notes</string>
     <string name="myPass">Введите пароль</string>
     <string name="saveNote">Заметка сохранена</string>
+    <string name="body_make_text">Для сохранения, заполните тело заметки</string>
+    <string name="data_format">dd.mm.yyyy</string>
+    <string name="note_saving">Заметка сохранена</string>
+    <string name="changes_save">Изменения сохранены</string>
+    <string name="note_delete">Удаление заметки</string>
+    <string name="question_to_delete_note">Вы уверены, что хотите удалить заметку?</string>
+    <string name="yes_i_sure">Да, я уверен(а)</string>
+    <string name="no_i_not_sure">Нет, не удаляем</string>
+    <string name="click_again">Нажмите еще раз, чтобы выйти</string>
+    <string name="password_saved">Пароль сохранен</string>
+    <string name="password_four_word">Пароль должен состоять из 4 цифр</string>
+    <string name="password_not_right">Неправильно введен пароль</string>
+
 </resources>
