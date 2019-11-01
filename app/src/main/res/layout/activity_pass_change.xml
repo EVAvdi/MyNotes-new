@@ -38,6 +38,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:ems="4"
+        android:maxLength="4"
         android:inputType="numberPassword" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

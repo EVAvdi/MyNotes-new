@@ -115,9 +115,12 @@ public class AddNoteActivity extends AppCompatActivity implements DatePickerDial
     CompoundButton.OnCheckedChangeListener checkedChangeListener = new CompoundButton.OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
             if (b) {
                 dataDeadline.setEnabled(true);
                 dataDeadline.requestFocus();
+                DialogFragment datePicker = new DataPickerFragment();
+                datePicker.show(getSupportFragmentManager(), TAG_DATE_PICKER);
             } else {
                 dataDeadline.setEnabled(false);
                 dataDeadline.setText("");
@@ -142,6 +145,9 @@ public class AddNoteActivity extends AppCompatActivity implements DatePickerDial
                 if (bundle.getInt(MainActivity.POSITION_LISTVIEW) == -1) {
                     if (textNote.getText().length() == 0) {
                         Toast.makeText(this, getString(R.string.body_make_text), Toast.LENGTH_LONG).show();
+                       textNote.setHintTextColor(getResources().getColor(R.color.mistake));
+                       textNote.requestFocus();
+                        return true;
                     } else {
                         myNoteRepository.saveNote(new Note((titleNote.getText().length() == 0 ? null : titleNote.getText().toString())
                                 , textNote.getText().toString()
