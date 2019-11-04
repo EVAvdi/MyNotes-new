@@ -14,5 +14,7 @@
     <string name="password_saved">Пароль сохранен</string>
     <string name="password_four_word">Пароль должен состоять из 4 цифр</string>
     <string name="password_not_right">Неправильно введен пароль</string>
+    <string name="last_password">Старый пароль</string>
+    <string name="new_password">Новый пароль</string>
 
 </resources>

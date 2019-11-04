@@ -97,13 +97,31 @@ public class PasswordActivity extends AppCompatActivity {
                 }
             }
 
-            if (enteredUserPassword.length() == 4) {
-                if (App.getKeystore().checkPassword(enteredUserPassword)) {
-                    finish();
-                } else {
-                    Toast.makeText(PasswordActivity.this, getString(R.string.password_not_right), Toast.LENGTH_SHORT).show();
-                }
-            }
+//            if (enteredUserPassword.length() == 4) {
+//                if(App.getKeystore().hasPassword()){
+//                    App.getKeystore().saveNewPassword(enteredUserPassword);
+//                    finish();
+//                }
+//                else if (App.getKeystore().checkPassword(enteredUserPassword)) {
+//                    finish();
+//                } else {
+//                    Toast.makeText(PasswordActivity.this, getString(R.string.password_not_right), Toast.LENGTH_SHORT).show();
+//                }
+
+//        }
+               if (enteredUserPassword.length() == 4){
+                   if(App.getKeystore().hasPassword()){
+                       if(App.getKeystore().checkPassword(enteredUserPassword)){
+                           finish();
+                       }else {
+                           Toast.makeText(PasswordActivity.this, getString(R.string.password_not_right), Toast.LENGTH_SHORT).show();
+                       }
+                   }else {
+                       App.getKeystore().saveNewPassword(enteredUserPassword);
+                       Toast.makeText(PasswordActivity.this, getString(R.string.password_saved), Toast.LENGTH_LONG).show();
+                       finish();
+                   }
+               }
         }
     }
 }

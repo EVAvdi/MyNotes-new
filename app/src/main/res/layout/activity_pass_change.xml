@@ -30,14 +30,26 @@
         android:src="@drawable/password" />
 
     <EditText
-        android:id="@+id/doYouPass"
+        android:id="@+id/doYouLastPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/lock"
         android:layout_marginTop="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:ems="4"
+        android:hint="@string/last_password"
+        android:maxLength="4"
+        android:inputType="numberPassword" />
+
+    <EditText
+        android:id="@+id/doYouPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/doYouLastPass"
+        android:hint="@string/new_password"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:maxLength="4"
         android:inputType="numberPassword" />
 
