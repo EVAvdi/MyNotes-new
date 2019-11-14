@@ -1,5 +1,6 @@
 package ru.netology.mynotes;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +18,7 @@ public class PasswordActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_password);
         initViews();
+
     }
 
     private void initViews() {
@@ -36,7 +38,19 @@ public class PasswordActivity extends AppCompatActivity {
 
         images = new int[]{R.id.profile_image1, R.id.profile_image2
                 , R.id.profile_image3, R.id.profile_image4};
+
+
     }
+
+    @Override
+    public void onBackPressed() {
+        //эмулируем нажатие на HOME, сворачивая приложение
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
+
 
     class NumberButtonClickListener implements View.OnClickListener {
         @Override
@@ -109,6 +123,8 @@ public class PasswordActivity extends AppCompatActivity {
 //                }
 
 //        }
+
+
                if (enteredUserPassword.length() == 4){
                    if(App.getKeystore().hasPassword()){
                        if(App.getKeystore().checkPassword(enteredUserPassword)){

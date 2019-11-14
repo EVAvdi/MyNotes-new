@@ -42,8 +42,9 @@ public class MainActivity extends AppCompatActivity {
             // Вывод окна с вводом пароля
             intent = new Intent(MainActivity.this, PasswordActivity.class);
 
+
             if (intent != null) {
-                startActivity(intent);
+                  startActivity(intent);
             }
 //        }
 

@@ -16,5 +16,6 @@
     <string name="password_not_right">Неправильно введен пароль</string>
     <string name="last_password">Старый пароль</string>
     <string name="new_password">Новый пароль</string>
+    <string name="you_password">Введите пароль!</string>
 
 </resources>
