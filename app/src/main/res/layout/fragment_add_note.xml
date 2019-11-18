@@ -17,13 +17,6 @@
             android:orientation="vertical"
             tools:context=".AddNoteActivity">
 
-               <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/toDoTextInput"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    app:hintTextAppearance="@style/FloatingLabelTextAppearance">
-
                     <EditText
                         android:id="@+id/userToDoEditText"
                         android:layout_width="match_parent"
@@ -39,18 +32,6 @@
                         android:textColor="@color/secondary_text"
                         tools:ignore="MissingConstraints" />
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/toDoTextInput01"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:paddingTop="20dp"
-                app:hintTextAppearance="@style/FloatingLabelTextAppearance">
 
                 <EditText
                     android:id="@+id/userToDoDescription"
@@ -67,16 +48,6 @@
                     android:scrollbars="vertical"
                     android:textColor="@color/secondary_text"
                     tools:ignore="MissingConstraints" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <LinearLayout
-                android:id="@+id/todoReminderAndDateContainerLayout"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1.5"
-                android:orientation="vertical">
-
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -121,63 +92,18 @@
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/toDoEnterDateLinearLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_marginLeft="36dp"
-                    android:layout_marginRight="36dp"
-                    android:layout_weight="1"
-                    android:animateLayoutChanges="true"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:gravity="top">
-
-
                         <EditText
                             android:id="@+id/newTodoDateEditText"
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1.5"
                             android:editable="false"
                             android:focusable="false"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginRight="60dp"
                             android:focusableInTouchMode="false"
                             android:gravity="center"
                             android:textIsSelectable="false" />
 
-<!--                        <TextView-->
-<!--                            android:layout_width="0dp"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_weight=".2"-->
-<!--                            android:gravity="center"-->
-<!--                            android:padding="4dp"-->
-<!--                            android:text="\@"-->
-<!--                            android:textColor="?attr/colorAccent" />-->
-
-<!--                        <EditText-->
-<!--                            android:id="@+id/newTodoTimeEditText"-->
-<!--                            android:layout_width="0dp"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_weight="1"-->
-<!--                            android:editable="false"-->
-<!--                            android:focusable="false"-->
-<!--                            android:focusableInTouchMode="false"-->
-<!--                            android:gravity="center"-->
-<!--                            android:textIsSelectable="false" />-->
-
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-
-            </LinearLayout>
         </LinearLayout>
 
 </ScrollView>

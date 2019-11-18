@@ -61,7 +61,6 @@ public class HashKeyStore implements KeyStore{
             md5Hex = "0" + md5Hex;
         }
 
-
         return md5Hex;
     }
 }

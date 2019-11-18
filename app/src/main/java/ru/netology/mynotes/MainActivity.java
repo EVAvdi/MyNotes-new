@@ -38,15 +38,11 @@ public class MainActivity extends AppCompatActivity {
 
         mySharedPreferences = getSharedPreferences(SHARED_PREFERENCES_APP_NAME, MODE_PRIVATE);
 
-//        if (App.getKeystore().hasPassword()) {
-            // Вывод окна с вводом пароля
-            intent = new Intent(MainActivity.this, PasswordActivity.class);
 
+        // Вывод окна с вводом пароля
+        intent = new Intent(MainActivity.this, PasswordActivity.class);
+        startActivity(intent);
 
-//            if (intent != null) {
-                  startActivity(intent);
-//            }
-//        }
 
         initViews();
     }
