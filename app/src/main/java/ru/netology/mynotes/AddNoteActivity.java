@@ -87,8 +87,7 @@ public class AddNoteActivity extends AppCompatActivity implements DatePickerDial
         }
 
         Toolbar toolbar = findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-
+        setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
 
         if (actionBar != null) {

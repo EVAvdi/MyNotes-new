@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">My Notes</string>
-    <string name="myPass">Введите пароль</string>
+    <string name="myPass">Изменение пароля</string>
     <string name="saveNote">Заметка сохранена</string>
     <string name="body_make_text">Для сохранения, заполните тело заметки</string>
     <string name="data_format">dd.mm.yyyy</string>
@@ -14,7 +14,7 @@
     <string name="password_saved">Пароль сохранен</string>
     <string name="password_four_word">Пароль должен состоять из 4 цифр</string>
     <string name="password_not_right">Неправильно введен пароль</string>
-    <string name="last_password">Старый пароль</string>
+    <string name="last_password">Введите старый пароль</string>
     <string name="new_password">Новый пароль</string>
     <string name="you_password">Введите пароль!</string>
 

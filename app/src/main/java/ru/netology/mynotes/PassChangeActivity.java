@@ -1,5 +1,6 @@
 package ru.netology.mynotes;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -28,35 +29,24 @@ public class PassChangeActivity extends AppCompatActivity {
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
-
-        final EditText editNewPassword = findViewById(R.id.doYouPass);
-
-
+        final EditText editLastPassword = findViewById(R.id.doYouLastPass);
         FloatingActionButton btnSavePassword = findViewById(R.id.next);
+
         btnSavePassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final EditText editLastPassword = findViewById(R.id.doYouLastPass);
                 final String lastPass;
                 lastPass = editLastPassword.getText().toString();
-
-//                if (editNewPassword.length() == 4) {
                     if(App.getKeystore().checkPassword(lastPass)){
-                    App.getKeystore().saveNewPassword(editNewPassword.getText().toString());
-
-                    editNewPassword.setText("");
-                    Toast.makeText(PassChangeActivity.this, getString(R.string.password_saved), Toast.LENGTH_SHORT).show();
-
-                    finish();
+                      MainActivity.mySharedPreferences.edit().clear().commit();
+                      final Intent intent = new Intent(PassChangeActivity.this, PasswordActivity.class);
+                      startActivity(intent);
+                   finish();
                 }
                 else {
                     Toast.makeText(PassChangeActivity.this, getString(R.string.password_not_right), Toast.LENGTH_LONG).show();
                 }
                 }
-//                    else {
-//                    Toast.makeText(PassChangeActivity.this, getString(R.string.password_four_word), Toast.LENGTH_SHORT).show();
-//                }
-//            }
         });
     }
 

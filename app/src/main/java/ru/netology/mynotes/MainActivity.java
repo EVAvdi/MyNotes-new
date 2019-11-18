@@ -43,9 +43,9 @@ public class MainActivity extends AppCompatActivity {
             intent = new Intent(MainActivity.this, PasswordActivity.class);
 
 
-            if (intent != null) {
+//            if (intent != null) {
                   startActivity(intent);
-            }
+//            }
 //        }
 
         initViews();
@@ -142,9 +142,9 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             intent = new Intent(MainActivity.this, PassChangeActivity.class);
 
-            if (intent != null) {
+//            if (intent != null) {
                 startActivity(intent);
-            }
+//            }
             return true;
         }
         return super.onOptionsItemSelected(item);
