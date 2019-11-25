@@ -20,10 +20,10 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    public final String SHARED_PREFERENCES_APP_NAME = "mySharePref";
+//    public final String SHARED_PREFERENCES_APP_NAME = "mySharePref";
     public static final String SHARED_PREFERENCES_APP_PASSWORD = "AppPassword";
     public static final String POSITION_LISTVIEW = "Position";
-    public static SharedPreferences mySharedPreferences;
+//    public static SharedPreferences mySharedPreferences;
     private Intent intent;
     private AdapterNote adapter;
     private static long back_pressed;
@@ -36,12 +36,12 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        mySharedPreferences = getSharedPreferences(SHARED_PREFERENCES_APP_NAME, MODE_PRIVATE);
+//        mySharedPreferences = getSharedPreferences(SHARED_PREFERENCES_APP_NAME, MODE_PRIVATE);
 
 
         // Вывод окна с вводом пароля
-        intent = new Intent(MainActivity.this, PasswordActivity.class);
-        startActivity(intent);
+//        intent = new Intent(MainActivity.this, PasswordActivity.class);
+//        startActivity(intent);
 
 
         initViews();

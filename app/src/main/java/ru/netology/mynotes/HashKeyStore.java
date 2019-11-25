@@ -14,7 +14,7 @@ public class HashKeyStore implements KeyStore{
 
     @Override
     public boolean hasPassword() {
-        if (MainActivity.mySharedPreferences.contains(MainActivity.SHARED_PREFERENCES_APP_PASSWORD)) {
+        if (PasswordActivity.mySharedPreferences.contains(MainActivity.SHARED_PREFERENCES_APP_PASSWORD)) {
             return true;
         } else {
             return false;
@@ -25,7 +25,7 @@ public class HashKeyStore implements KeyStore{
     public boolean checkPassword(String password) {
 
         String hashPassword = md5Custom(password + md5Custom(password));
-        String sharePrefPassword = MainActivity.mySharedPreferences.getString(MainActivity.SHARED_PREFERENCES_APP_PASSWORD, "");
+        String sharePrefPassword = PasswordActivity.mySharedPreferences.getString(MainActivity.SHARED_PREFERENCES_APP_PASSWORD, "");
         if (sharePrefPassword.equals(hashPassword))
             return true;
         else
@@ -35,7 +35,7 @@ public class HashKeyStore implements KeyStore{
     @Override
     public void saveNewPassword(String password) {
         SharedPreferences.Editor editor;
-        editor = MainActivity.mySharedPreferences.edit();
+        editor = PasswordActivity.mySharedPreferences.edit();
         editor.putString(MainActivity.SHARED_PREFERENCES_APP_PASSWORD, md5Custom(password + md5Custom(password)));
         editor.apply();
     }

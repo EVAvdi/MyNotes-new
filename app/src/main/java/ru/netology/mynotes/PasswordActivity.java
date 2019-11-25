@@ -1,6 +1,7 @@
 package ru.netology.mynotes;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -11,12 +12,14 @@ import androidx.appcompat.app.AppCompatActivity;
 public class PasswordActivity extends AppCompatActivity {
     private String enteredUserPassword = "";
     private int[] images;
-
+    public final String SHARED_PREFERENCES_APP_NAME = "mySharePref";
+    public static SharedPreferences mySharedPreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_password);
+        mySharedPreferences = getSharedPreferences(SHARED_PREFERENCES_APP_NAME, MODE_PRIVATE);
         initViews();
 
     }
@@ -114,14 +117,18 @@ public class PasswordActivity extends AppCompatActivity {
                if (enteredUserPassword.length() == 4){
                    if(App.getKeystore().hasPassword()){
                        if(App.getKeystore().checkPassword(enteredUserPassword)){
-                           finish();
+                           Intent intent = new Intent(PasswordActivity.this, MainActivity.class);
+                           startActivity(intent);
+//                           finish();
                        }else {
                            Toast.makeText(PasswordActivity.this, getString(R.string.password_not_right), Toast.LENGTH_SHORT).show();
                        }
                    }else {
                        App.getKeystore().saveNewPassword(enteredUserPassword);
                        Toast.makeText(PasswordActivity.this, getString(R.string.password_saved), Toast.LENGTH_LONG).show();
-                       finish();
+                       Intent intent = new Intent(PasswordActivity.this, MainActivity.class);
+                       startActivity(intent);
+//                       finish();
                    }
                }
         }

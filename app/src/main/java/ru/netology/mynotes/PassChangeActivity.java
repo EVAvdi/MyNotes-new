@@ -38,7 +38,7 @@ public class PassChangeActivity extends AppCompatActivity {
                 final String lastPass;
                 lastPass = editLastPassword.getText().toString();
                     if(App.getKeystore().checkPassword(lastPass)){
-                      MainActivity.mySharedPreferences.edit().clear().commit();
+                      PasswordActivity.mySharedPreferences.edit().clear().commit();
                       final Intent intent = new Intent(PassChangeActivity.this, PasswordActivity.class);
                       startActivity(intent);
                    finish();
